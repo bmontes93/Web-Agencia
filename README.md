@@ -1,4 +1,4 @@
-# 🚀 Agencia de Crecimiento Digital
+#  Agencia de Crecimiento Digital
 
 <div align="center">
 
@@ -13,7 +13,7 @@
 
 ---
 
-## 📖 Descripción
+##  Descripción
 
 **Agencia de Crecimiento Digital** es una plataforma web _Full Stack_ diseñada para ofrecer una experiencia de usuario inmersiva y de alto rendimiento. Este proyecto no es solo un sitio web, es una solución escalable que integra una arquitectura moderna de microservicios (preparada) con una interfaz de usuario reactiva y animada en 3D.
 
@@ -21,7 +21,7 @@ El objetivo es proporcionar a los visitantes una navegación fluida, tiempos de 
 
 ---
 
-## 🏗️ Arquitectura del Sistema
+## 🏗️Arquitectura del Sistema
 
 Este diagrama ilustra el flujo de datos y la interacción entre el cliente, el servidor y los servicios externos.
 
@@ -62,7 +62,7 @@ graph TD
 
 ---
 
-## 🛠️ Stack Tecnológico
+##  Stack Tecnológico
 
 La aplicación está construida sobre un stack moderno JAMstack / PERN (sin DB por el momento).
 
@@ -80,7 +80,7 @@ La aplicación está construida sobre un stack moderno JAMstack / PERN (sin DB p
 
 ---
 
-## ⚙️ Configuración y Variables de Entorno
+##  Configuración y Variables de Entorno
 
 Para ejecutar este proyecto, necesitas configurar las siguientes variables de entorno en tu archivo `backend/.env`.
 
@@ -94,7 +94,7 @@ Para ejecutar este proyecto, necesitas configurar las siguientes variables de en
 
 ---
 
-## 🚀 Instalación y Despliegue
+##  Instalación y Despliegue
 
 ### Clonado e Instalación
 
@@ -124,7 +124,7 @@ cd frontend && npm run dev
 
 ---
 
-## 🗺️ Roadmap del Proyecto
+##  Roadmap del Proyecto
 
 - [x] **Fase 1: MVP** - Estructura base, landing page y contacto funcional.
 - [x] **Fase 2: UI/UX 3D** - Integración de elementos flotantes y animaciones.
@@ -134,7 +134,7 @@ cd frontend && npm run dev
 
 ---
 
-## 🤝 Contribuyendo
+##  Contribuyendo
 
 1.  Haz un **Fork** del proyecto.
 2.  Crea tu rama de feature (`git checkout -b feature/AmazingFeature`).
@@ -144,6 +144,4 @@ cd frontend && npm run dev
 
 ---
 
-<div align="center">
-  <sub>Desarrollado con pasión por <a href="https://github.com/bmontes93">bmontes93</a></sub>
-</div>
+
