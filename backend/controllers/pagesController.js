@@ -65,7 +65,7 @@ const getDetailPage = catchAsync(async (req, res, next) => {
   const { slug } = req.params;
   const category = req.baseUrl.substring(1); // Remove leading '/'
   const pageKey = `${category}/${slug}`;
-
+  
   const pageInfo = await getPageData(pageKey);
   renderPage(res, pageInfo);
 });

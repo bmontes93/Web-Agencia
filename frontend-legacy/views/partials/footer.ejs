@@ -1,0 +1,41 @@
+<footer>
+    <div class="footer-content">
+        <div class="info-contacto">
+            <h3>Contacto</h3>
+            <p>Email: info@agenciadigital.com</p>
+            <p>Teléfono: +123 456 7890</p>
+        </div>
+        <nav class="footer-nav">
+            <h3>Navegación</h3>
+            <ul>
+                <li><a href="/servicios">Servicios</a></li>
+                <li><a href="/casos-de-exito">Casos de Éxito</a></li>
+                <li><a href="/nosotros">Nosotros</a></li>
+                <li><a href="/recursos">Recursos</a></li>
+            </ul>
+        </nav>
+        <div class="redes-sociales">
+            <h3>Síguenos</h3>
+            <a href="https://www.linkedin.com/company/agenciadigital" target="_blank">LinkedIn</a>
+            <a href="https://twitter.com/agenciadigital" target="_blank">Twitter</a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 Agencia de Crecimiento Digital. Todos los derechos reservados.</p>
+        <a href="/politica-de-privacidad">Política de Privacidad</a>
+        <a href="/terminos-de-servicio">Términos de Servicio</a>
+    </div>
+</footer>
+
+<button id="back-to-top" title="Volver arriba">&#9650;</button>
+
+<div id="cookie-consent-banner" class="cookie-banner">
+    <p>Utilizamos cookies para mejorar tu experiencia de navegación. Al continuar navegando, aceptas nuestra <a href="/politica-de-privacidad">Política de Privacidad</a>.</p>
+    <button id="accept-cookies" class="btn-accept-cookies">Aceptar</button>
+</div>
+
+<% if (NODE_ENV === 'production') { %>
+  <script src="/js/main.min.js"></script>
+<% } else { %>
+  <script src="/js/main.js"></script>
+<% } %>

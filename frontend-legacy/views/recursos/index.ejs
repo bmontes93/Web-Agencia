@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <%- include('../partials/head', { title: title }) %>
+</head>
+<body>
+    <%- include('../partials/header') %>
+    <main>
+        <section class="fade-in-section page-title">
+            <h1><%= header.title %></h1>
+            <p><%= header.subtitle %></p>
+        </section>
+
+        <section class="fade-in-section blog-main">
+            <div class="search-bar">
+                <input type="text" id="blog-search-input" placeholder="Buscar artículos...">
+                <button>Buscar</button>
+            </div>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="seo">SEO</button>
+                <button class="filter-btn" data-filter="marketing">Marketing</button>
+                <button class="filter-btn" data-filter="cro">CRO</button>
+            </div>
+            <div class="articulos-grid">
+                <% articles.forEach(article => { %>
+                    <article>
+                        <img src="<%= article.image %>" alt="<%= article.title %>">
+                        <h3><a href="<%= article.url %>"><%= article.title %></a></h3>
+                        <p><%= article.summary %></p>
+                    </article>
+                <% }); %>
+            </div>
+        </section>
+    </main>
+    <%- include('../partials/footer') %>
+</body>
+</html>

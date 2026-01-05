@@ -7,9 +7,7 @@ describe('Endpoints Principales', () => {
     const res = await request(app).get('/');
     expect(res.statusCode).toEqual(200);
     expect(res.text).toContain('<title>Agencia de Crecimiento Digital</title>');
-    expect(res.text).toContain(
-      '<h1>Escalamos tu Negocio con Estrategias de Crecimiento Digital Basadas en Datos</h1>'
-    );
+    expect(res.text).toContain('<h1>Escalamos tu Negocio con Estrategias de Crecimiento Digital Basadas en Datos</h1>');
   });
 
   it('debería cargar la página de contacto con el contenido correcto', async () => {
@@ -32,18 +30,21 @@ describe('API de Contacto - POST /api/contact', () => {
   nodemailer.createTransport.mockReturnValue({ sendMail: sendMailMock });
   nodemailer.getTestMessageUrl.mockReturnValue('http://test-url.com');
 
+
   beforeEach(() => {
     // Limpiar mocks antes de cada prueba
     sendMailMock.mockClear();
   });
 
   it('debería enviar el formulario de contacto con datos válidos', async () => {
-    const res = await request(app).post('/api/contact').send({
-      name: 'Test User',
-      email: 'test@example.com',
-      message: 'Este es un mensaje de prueba.',
-      company: 'Test Inc.',
-    });
+    const res = await request(app)
+      .post('/api/contact')
+      .send({
+        name: 'Test User',
+        email: 'test@example.com',
+        message: 'Este es un mensaje de prueba.',
+        company: 'Test Inc.',
+      });
 
     expect(res.statusCode).toEqual(200);
     expect(res.body.success).toBe(true);
@@ -52,10 +53,12 @@ describe('API de Contacto - POST /api/contact', () => {
   });
 
   it('debería devolver un error 400 si el nombre está vacío', async () => {
-    const res = await request(app).post('/api/contact').send({
-      email: 'test@example.com',
-      message: 'Mensaje de prueba.',
-    });
+    const res = await request(app)
+      .post('/api/contact')
+      .send({
+        email: 'test@example.com',
+        message: 'Mensaje de prueba.',
+      });
 
     expect(res.statusCode).toEqual(400);
     expect(res.body.success).toBe(false);
@@ -64,11 +67,13 @@ describe('API de Contacto - POST /api/contact', () => {
   });
 
   it('debería devolver un error 400 si el email es inválido', async () => {
-    const res = await request(app).post('/api/contact').send({
-      name: 'Test User',
-      email: 'email-invalido',
-      message: 'Mensaje de prueba.',
-    });
+    const res = await request(app)
+      .post('/api/contact')
+      .send({
+        name: 'Test User',
+        email: 'email-invalido',
+        message: 'Mensaje de prueba.',
+      });
 
     expect(res.statusCode).toEqual(400);
     expect(res.body.success).toBe(false);
@@ -77,11 +82,13 @@ describe('API de Contacto - POST /api/contact', () => {
   });
 
   it('debería devolver un error 400 si el mensaje está vacío', async () => {
-    const res = await request(app).post('/api/contact').send({
-      name: 'Test User',
-      email: 'test@example.com',
-      message: '',
-    });
+    const res = await request(app)
+      .post('/api/contact')
+      .send({
+        name: 'Test User',
+        email: 'test@example.com',
+        message: '',
+      });
 
     expect(res.statusCode).toEqual(400);
     expect(res.body.success).toBe(false);
@@ -92,11 +99,14 @@ describe('API de Contacto - POST /api/contact', () => {
 
 describe('Security Middleware', () => {
   it('debería bloquear una petición de un origen no permitido por CORS', async () => {
-    const res = await request(app).post('/api/contact').set('Origin', 'http://evil.com').send({
-      name: 'Test User',
-      email: 'test@example.com',
-      message: 'Este es un mensaje de prueba.',
-    });
+    const res = await request(app)
+      .post('/api/contact')
+      .set('Origin', 'http://evil.com')
+      .send({
+        name: 'Test User',
+        email: 'test@example.com',
+        message: 'Este es un mensaje de prueba.',
+      });
 
     // Las peticiones bloqueadas por CORS no devuelven un status code estándar,
     // sino que terminan en un error a nivel de red. Supertest lo captura como un error.

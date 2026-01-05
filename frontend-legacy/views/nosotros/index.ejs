@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <%- include('../partials/head', { title: title }) %>
+</head>
+<body>
+    <%- include('../partials/header') %>
+    <main>
+        <section class="fade-in-section page-title">
+            <h1><%= header.title %></h1>
+            <p><%= header.subtitle %></p>
+        </section>
+
+        <section class="fade-in-section about-section">
+            <h2><%= about.title %></h2>
+            <p><%= about.text %></p>
+        </section>
+
+        <section class="fade-in-section mission-vision-section">
+            <div class="mission">
+                <h3><%= mission.title %></h3>
+                <p><%= mission.text %></p>
+            </div>
+            <div class="vision">
+                <h3><%= vision.title %></h3>
+                <p><%= vision.text %></p>
+            </div>
+        </section>
+
+        <section class="fade-in-section team-section">
+            <h2><%= team.title %></h2>
+            <div class="team-grid">
+                <% team.members.forEach(member => { %>
+                    <div class="team-member">
+                        <img src="<%= member.image %>" alt="<%= member.name %>">
+                        <h3><%= member.name %></h3>
+                        <p><%= member.role %></p>
+                    </div>
+                <% }); %>
+            </div>
+        </section>
+    </main>
+    <%- include('../partials/footer') %>
+</body>
+</html>

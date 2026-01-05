@@ -4,8 +4,6 @@ const express = require('express');
 const cors = require('cors');
 const helmet = require('helmet');
 const rateLimit = require('express-rate-limit');
-const compression = require('compression'); // Compression middleware
-const hpp = require('hpp'); // Prevent HTTP Parameter Pollution
 const logger = require('./utils/logger');
 const AppError = require('./utils/appError'); // Importar AppError
 
@@ -29,13 +27,7 @@ requiredEnvVars.forEach((envVar) => {
 });
 
 // --- Security Middleware ---
-app.use(helmet({
-  contentSecurityPolicy: false, // Disable CSP for Development/React compatibility
-}));
-app.use(hpp()); // Prevent HTTP Parameter Pollution
-
-// --- Performance Middleware ---
-app.use(compression()); // Compress all responses
+app.use(helmet());
 
 const allowedOrigins = process.env.FRONTEND_URL
   ? process.env.FRONTEND_URL.split(',')
@@ -65,29 +57,25 @@ app.use('/api', apiLimiter);
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-const apiRoutes = require('./routes/api');
-
-// --- Template Engine Setup (Legacy/Fallback) ---
+// --- Template Engine Setup ---
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '../frontend/views'));
 
 // --- Application Routes ---
-// Mount API routes BEFORE the catch-all
-app.use('/api', apiRoutes);
+const appRoutes = require('./routes');
+app.use('/', appRoutes);
 
-// --- Servir archivos estáticos del Frontend (React Build) ---
-app.use(express.static(path.join(__dirname, '../frontend/dist')));
+// --- Servir archivos estáticos del Frontend ---
+// Le dice a Express que sirva todos los archivos desde la carpeta '../frontend'
+app.use(
+  express.static(path.join(__dirname, '../frontend'), {
+    maxAge: '1d', // Cache static files for 1 day
+  })
+);
 
-// --- Catch-all for React Router (SPA Mode) ---
-app.get('*', (req, res, next) => {
-    // If request accepts html or is a direct navigation, serve index.html
-    const isApi = req.path.startsWith('/api');
-    if (!isApi && req.accepts('html')) {
-        res.sendFile(path.join(__dirname, '../frontend/dist', 'index.html'));
-    } else {
-        // If it's an API request or something else that wasn't found
-        next(new AppError(`No se puede encontrar ${req.originalUrl} en este servidor!`, 404));
-    }
+// --- Manejo de rutas no encontradas (404) ---
+app.all('*', (req, res, next) => {
+  next(new AppError(`No se puede encontrar ${req.originalUrl} en este servidor!`, 404));
 });
 
 // --- Error Handling Middleware ---
@@ -100,36 +88,22 @@ module.exports = app;
 // --- Iniciar el Servidor ---
 // Solo iniciar el servidor si el archivo se ejecuta directamente
 if (require.main === module) {
-  const sequelize = require('./config/database');
+  const server = app.listen(PORT, () => {
+    logger.info(`Servidor backend corriendo en http://localhost:${PORT}`);
+    logger.info('Sirviendo el frontend desde la carpeta: ', path.join(__dirname, '../frontend'));
+  });
 
-  // Sincronizar la base de datos antes de iniciar el servidor
-  sequelize
-    .sync()
-    .then(() => {
-      logger.info('Base de datos sincronizada (SQLite)');
-      const server = app.listen(PORT, () => {
-        logger.info(`Servidor backend corriendo en http://localhost:${PORT}`);
-        logger.info(
-          'Sirviendo el frontend desde la carpeta: ',
-          path.join(__dirname, '../frontend')
-        );
+  // --- Manejo de Cierre Graceful ---
+  const gracefulShutdown = (signal) => {
+    process.on(signal, () => {
+      logger.info(`${signal} recibido. Cerrando el servidor...`);
+      server.close(() => {
+        logger.info('Servidor cerrado.');
+        process.exit(0);
       });
-
-      // --- Manejo de Cierre Graceful ---
-      const gracefulShutdown = (signal) => {
-        process.on(signal, () => {
-          logger.info(`${signal} recibido. Cerrando el servidor...`);
-          server.close(() => {
-            logger.info('Servidor cerrado.');
-            process.exit(0);
-          });
-        });
-      };
-
-      gracefulShutdown('SIGTERM');
-      gracefulShutdown('SIGINT');
-    })
-    .catch((err) => {
-      logger.error('Error al sincronizar la base de datos:', err);
     });
+  };
+
+  gracefulShutdown('SIGTERM');
+  gracefulShutdown('SIGINT');
 }

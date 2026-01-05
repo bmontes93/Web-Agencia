@@ -6,7 +6,7 @@ const logger = require('../utils/logger');
 const catchAsync = require('../utils/catchAsync'); // Import catchAsync
 
 // Usamos un manejador async para poder usar await
-const handleContactForm = catchAsync(
+const handleContactForm /* eslint-disable-line no-unused-vars */ = catchAsync(
   async (req, res, next /* eslint-disable-line no-unused-vars */) => {
     // Manejar resultados de la validación
     const errors = validationResult(req);
@@ -23,22 +23,6 @@ const handleContactForm = catchAsync(
     const sanitizedEmail = email;
     const sanitizedMessage = message;
     const sanitizedCompany = company || 'No especificada';
-
-    // --- Guardar en Base de Datos (SQLite) ---
-    const Message = require('../models/Message');
-    try {
-      await Message.create({
-        name: sanitizedName,
-        email: sanitizedEmail,
-        company: sanitizedCompany,
-        message: sanitizedMessage,
-      });
-      logger.info('Mensaje guardado en la base de datos');
-    } catch (dbError) {
-      logger.error('Error al guardar mensaje en la base de datos:', dbError);
-      // No interrumpimos el flujo si falla la BD, pero lo logueamos
-      // Opcionalmente podrías retornar error.
-    }
 
     // --- Configuración de Nodemailer con credenciales de entorno ---
     let transporter = nodemailer.createTransport({
@@ -84,5 +68,5 @@ const handleContactForm = catchAsync(
 );
 
 module.exports = {
-  handleContactForm,
+    handleContactForm,
 };
