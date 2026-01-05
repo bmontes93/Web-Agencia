@@ -1,0 +1,41 @@
+{
+  "view": "recursos/index",
+  "title": "Recursos",
+  "description": "Artículos y recursos sobre marketing digital, desarrollo web y crecimiento de negocios.",
+  "header": {
+    "title": "Recursos para Impulsar tu Crecimiento",
+    "subtitle": "Encuentra aquí artículos, guías y herramientas para llevar tu negocio al siguiente nivel."
+  },
+  "articles": [
+    {
+      "title": "5 Estrategias de SEO para Mejorar tu Posicionamiento",
+      "summary": "Descubre 5 estrategias de SEO que puedes implementar hoy mismo para mejorar tu posicionamiento en Google y atraer más tráfico orgánico.",
+      "image": "/images/articulo-1-imagen.jpg",
+      "url": "/recursos/articulo-1"
+    },
+    {
+      "title": "Cómo Crear una Campaña de Email Marketing Exitosa",
+      "summary": "Aprende a crear una campaña de email marketing que convierta, desde la planificación hasta el análisis de resultados.",
+      "image": "/images/articulo-2-imagen.jpg",
+      "url": "/recursos/articulo-2"
+    },
+    {
+      "title": "La Importancia de la Analítica Web para tu Negocio",
+      "summary": "Entiende por qué la analítica web es fundamental para tomar decisiones de negocio informadas y optimizar tu estrategia digital.",
+      "image": "/images/articulo-3-imagen.jpg",
+      "url": "/recursos/articulo-3"
+    },
+    {
+      "title": "Marketing de Contenidos: Guía para Principiantes",
+      "summary": "Iníciate en el mundo del marketing de contenidos con esta guía completa para principiantes. Aprende a crear y distribuir contenido de valor.",
+      "image": "/images/marketing-contenidos-imagen.jpg",
+      "url": "/recursos/articulo-4"
+    },
+    {
+      "title": "Pauta Digital vs. SEO: ¿Cuál es Mejor para tu Negocio?",
+      "summary": "Comparamos la pauta digital (SEM) y el SEO para que puedas decidir qué estrategia es la más adecuada para tu negocio y tus objetivos.",
+      "image": "/images/pauta-digital-imagen.jpg",
+      "url": "/recursos/articulo-5"
+    }
+  ]
+}

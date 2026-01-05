@@ -1,0 +1,45 @@
+{
+  "name": "agencia-backend",
+  "version": "1.0.0",
+  "description": "Backend para el sitio de la agencia digital",
+  "main": "server.js",
+  "scripts": {
+    "start": "NODE_ENV=production npm run build && node server.js",
+    "dev": "nodemon server.js",
+    "lint": "eslint . --ext .js --fix",
+    "test": "jest",
+    "build:css": "cleancss -o ../frontend/css/style.min.css ../frontend/css/style.css",
+    "build:js": "terser ../frontend/js/main.js -o ../frontend/js/main.min.js -c -m",
+    "build:images": "imagemin ../images/* --out-dir=../images/optimized --plugin=webp",
+    "build": "npm run build:css && npm run build:js && npm run build:images"
+  },
+  "dependencies": {
+    "compression": "^1.8.1",
+    "cors": "^2.8.5",
+    "dompurify": "^3.2.6",
+    "dotenv": "^17.2.1",
+    "ejs": "^3.1.10",
+    "express": "^4.17.1",
+    "express-rate-limit": "^8.0.1",
+    "express-validator": "^7.2.1",
+    "helmet": "^8.1.0",
+    "hpp": "^0.2.3",
+    "nodemailer": "^7.0.6",
+    "sequelize": "^6.37.7",
+    "sqlite3": "^5.1.7",
+    "winston": "^3.17.0"
+  },
+  "devDependencies": {
+    "clean-css-cli": "^5.6.3",
+    "eslint": "^9.34.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.4",
+    "imagemin-cli": "^7.0.0",
+    "imagemin-webp": "^6.1.0",
+    "jest": "^30.1.3",
+    "nodemon": "^3.1.10",
+    "prettier": "^3.6.2",
+    "supertest": "^7.1.4",
+    "terser": "^5.44.0"
+  }
+}

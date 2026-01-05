@@ -1,0 +1,54 @@
+{
+  "view": "recursos/articulo-4",
+  "title": "Marketing de Contenidos: Guía para Principiantes",
+  "description": "Iníciate en el mundo del marketing de contenidos con esta guía completa para principiantes. Aprende a crear y distribuir contenido de valor.",
+  "author": "María García",
+  "date": "2024-07-10",
+  "image": "/images/marketing-contenidos-imagen.jpg",
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "El marketing de contenidos es una estrategia a largo plazo que se centra en la creación y distribución de contenido valioso, relevante y consistente para atraer y retener a una audiencia claramente definida y, en última instancia, para impulsar la acción rentable del cliente."
+    },
+    {
+      "type": "heading",
+      "text": "1. Define tu Estrategia de Contenidos"
+    },
+    {
+      "type": "paragraph",
+      "text": "Antes de empezar a crear contenido, necesitas una estrategia. Define tus objetivos, tu público objetivo, los temas que vas a tratar y los formatos que vas a utilizar (blog, vídeo, podcast, etc.)."
+    },
+    {
+      "type": "heading",
+      "text": "2. Crea Contenido de Calidad"
+    },
+    {
+      "type": "paragraph",
+      "text": "La calidad es más importante que la cantidad. Investiga a fondo los temas que vas a tratar, escribe de forma clara y amena, y utiliza imágenes y otros elementos visuales para enriquecer tu contenido."
+    },
+    {
+      "type": "heading",
+      "text": "3. Optimiza tu Contenido para SEO"
+    },
+    {
+      "type": "paragraph",
+      "text": "Para que tu contenido sea encontrado en los motores de búsqueda, tienes que optimizarlo para SEO. Investiga las palabras clave relevantes para tu sector y úsalas de forma natural en tus títulos, encabezados y texto."
+    },
+    {
+      "type": "heading",
+      "text": "4. Promociona tu Contenido"
+    },
+    {
+      "type": "paragraph",
+      "text": "No basta con crear buen contenido, también tienes que promocionarlo. Compártelo en tus redes sociales, envíalo a tu lista de suscriptores por email, y busca oportunidades de colaboración con otros sitios web o influencers de tu sector."
+    },
+    {
+      "type": "heading",
+      "text": "5. Mide los Resultados"
+    },
+    {
+      "type": "paragraph",
+      "text": "Analiza el rendimiento de tu contenido para saber qué funciona y qué no. Presta atención a métricas como el tráfico, el tiempo de permanencia, las veces que se comparte en redes sociales y las conversiones generadas."
+    }
+  ]
+}

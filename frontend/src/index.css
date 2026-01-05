@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom "WOW" Styles */
+@layer base {
+  body {
+    @apply bg-slate-950 text-white font-sans antialiased;
+  }
+}

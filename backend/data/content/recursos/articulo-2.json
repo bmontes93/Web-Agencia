@@ -1,0 +1,54 @@
+{
+  "view": "recursos/articulo-2",
+  "title": "Cómo Crear una Campaña de Email Marketing Exitosa",
+  "description": "Aprende a crear una campaña de email marketing que convierta, desde la planificación hasta el análisis de resultados.",
+  "author": "María García",
+  "date": "2024-07-22",
+  "image": "/images/articulo-2-imagen.jpg",
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "El email marketing sigue siendo una de las herramientas más efectivas para conectar con tu audiencia y generar conversiones. En este artículo, te guiaremos paso a paso para crear una campaña de email marketing exitosa."
+    },
+    {
+      "type": "heading",
+      "text": "1. Define tus Objetivos y tu Audiencia"
+    },
+    {
+      "type": "paragraph",
+      "text": "Antes de empezar, es fundamental que tengas claros tus objetivos: ¿quieres generar ventas, fidelizar clientes, anunciar novedades? Y también, a quién te diriges. Segmenta tu lista de contactos para enviar mensajes más relevantes y personalizados."
+    },
+    {
+      "type": "heading",
+      "text": "2. Elige una Herramienta de Email Marketing"
+    },
+    {
+      "type": "paragraph",
+      "text": "Existen muchas herramientas de email marketing, como Mailchimp, Sendinblue o ActiveCampaign. Elige la que mejor se adapte a tus necesidades y a tu presupuesto. Estas herramientas te permitirán gestionar tus contactos, diseñar tus correos y analizar los resultados."
+    },
+    {
+      "type": "heading",
+      "text": "3. Diseña un Correo Atractivo y Responsive"
+    },
+    {
+      "type": "paragraph",
+      "text": "El diseño de tu correo es clave para captar la atención de tus suscriptores. Utiliza un diseño limpio, con una estructura clara y un llamado a la acción (CTA) visible. Asegúrate de que tu correo se vea bien en todos los dispositivos, tanto en ordenadores como en móviles."
+    },
+    {
+      "type": "heading",
+      "text": "4. Escribe un Asunto y un Contenido Persuasivo"
+    },
+    {
+      "type": "paragraph",
+      "text": "El asunto es lo primero que verán tus suscriptores, así que tiene que ser atractivo y generar curiosidad. El contenido del correo debe ser relevante, valioso y persuasivo. Utiliza un tono cercano y personal, y no te olvides de incluir un CTA claro que invite a la acción."
+    },
+    {
+      "type": "heading",
+      "text": "5. Mide y Analiza los Resultados"
+    },
+    {
+      "type": "paragraph",
+      "text": "Una vez que hayas enviado tu campaña, es hora de analizar los resultados. Presta atención a métricas como la tasa de apertura, la tasa de clics (CTR) y la tasa de conversión. Estos datos te ayudarán a entender qué funciona y qué no, para poder optimizar tus futuras campañas."
+    }
+  ]
+}

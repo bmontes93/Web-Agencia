@@ -1,0 +1,54 @@
+{
+  "view": "recursos/articulo-1",
+  "title": "5 Estrategias de SEO para Mejorar tu Posicionamiento",
+  "description": "Descubre 5 estrategias de SEO que puedes implementar hoy mismo para mejorar tu posicionamiento en Google y atraer más tráfico orgánico.",
+  "author": "Ana López",
+  "date": "2024-07-29",
+  "image": "/images/articulo-1-imagen.jpg",
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "El SEO (Search Engine Optimization) es una de las disciplinas más importantes del marketing digital. Un buen posicionamiento en los motores de búsqueda puede significar un flujo constante de tráfico orgánico y de alta calidad hacia tu sitio web. En este artículo, te presentamos 5 estrategias de SEO que puedes implementar desde hoy para mejorar tu visibilidad en Google."
+    },
+    {
+      "type": "heading",
+      "text": "1. Investigación de Palabras Clave (Keyword Research)"
+    },
+    {
+      "type": "paragraph",
+      "text": "La investigación de palabras clave es el pilar de cualquier estrategia de SEO. Consiste en identificar las palabras y frases que tu público objetivo utiliza para buscar productos o servicios como los tuyos. Herramientas como el Planificador de Palabras Clave de Google, Ahrefs o SEMrush te pueden ayudar en esta tarea. Una vez que tengas tu lista de palabras clave, úsalas de forma natural en el contenido de tu sitio web, en los títulos, en las meta descripciones y en las URLs."
+    },
+    {
+      "type": "heading",
+      "text": "2. Creación de Contenido de Calidad"
+    },
+    {
+      "type": "paragraph",
+      "text": "Google premia a los sitios web que ofrecen contenido de alta calidad, relevante y útil para los usuarios. Crea artículos de blog, guías, tutoriales o vídeos que respondan a las preguntas de tu audiencia y les aporten valor. Un contenido bien estructurado, fácil de leer y original no solo atraerá a los usuarios, sino que también te ayudará a conseguir enlaces de otros sitios web, un factor clave para el SEO."
+    },
+    {
+      "type": "heading",
+      "text": "3. Optimización On-Page"
+    },
+    {
+      "type": "paragraph",
+      "text": "La optimización on-page se refiere a todas las acciones que puedes realizar dentro de tu propio sitio web para mejorar su posicionamiento. Esto incluye la optimización de los títulos y las meta descripciones, el uso de encabezados (H1, H2, H3) para estructurar el contenido, la optimización de las imágenes (tamaño, nombre del archivo, atributo ALT) y la mejora de la velocidad de carga del sitio."
+    },
+    {
+      "type":- "heading",
+      "text": "4. Link Building"
+    },
+    {
+      "type": "paragraph",
+      "text": "El link building es el proceso de conseguir que otros sitios web enlacen al tuyo. Estos enlaces, también conocidos como backlinks, son una señal de autoridad para Google. Cuantos más enlaces de calidad apunten a tu sitio, mejor será tu posicionamiento. Puedes conseguir enlaces de forma natural, creando contenido de calidad que otros quieran enlazar, o de forma proactiva, a través de estrategias como el guest blogging o la colaboración con otros sitios de tu sector."
+    },
+    {
+      "type": "heading",
+      "text": "5. SEO Técnico"
+    },
+    {
+      "type": "paragraph",
+      "text": "El SEO técnico se encarga de asegurar que tu sitio web sea rastreable e indexable por los motores de búsqueda. Esto incluye aspectos como la creación de un sitemap XML, el uso de un archivo robots.txt para guiar a los robots de Google, la implementación de datos estructurados (Schema Markup) para enriquecer tus resultados de búsqueda y la optimización de la arquitectura de tu sitio web."
+    }
+  ]
+}

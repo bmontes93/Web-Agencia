@@ -1,0 +1,47 @@
+
+{
+  "view": "nosotros/index",
+  "title": "Sobre Nosotros",
+  "description": "Conoce a nuestro equipo, nuestra misión y nuestra visión.",
+  "header": {
+    "title": "Conoce a Nuestro Equipo",
+    "subtitle": "Somos un equipo de profesionales apasionados por el marketing digital y el desarrollo web."
+  },
+  "about": {
+    "title": "Nuestra Historia",
+    "text": "Nacimos en 2023 con la misión de ayudar a las empresas a crecer en el mundo digital. Desde entonces, hemos trabajado con decenas de clientes para mejorar su presencia online y alcanzar sus objetivos de negocio."
+  },
+  "mission": {
+    "title": "Nuestra Misión",
+    "text": "Nuestra misión es ofrecer soluciones de marketing digital y desarrollo web de alta calidad, personalizadas a las necesidades de cada cliente. Buscamos establecer relaciones a largo plazo, basadas en la confianza y los resultados."
+  },
+  "vision": {
+    "title": "Nuestra Visión",
+    "text": "Nuestra visión es ser la agencia de crecimiento digital de referencia en el mercado hispanohablante, reconocida por nuestra innovación, nuestra excelencia y nuestro compromiso con el éxito de nuestros clientes."
+  },
+  "team": {
+    "title": "Nuestro Equipo",
+    "members": [
+      {
+        "name": "Juan Pérez",
+        "role": "CEO y Fundador",
+        "image": "/images/team-member-1.jpg"
+      },
+      {
+        "name": "María García",
+        "role": "Directora de Marketing",
+        "image": "/images/team-member-2.jpg"
+      },
+      {
+        "name": "Pedro Rodríguez",
+        "role": "Desarrollador Web Principal",
+        "image": "/images/team-member-3.jpg"
+      },
+      {
+        "name": "Ana López",
+        "role": "Especialista en SEO",
+        "image": "/images/team-member-4.jpg"
+      }
+    ]
+  }
+}
