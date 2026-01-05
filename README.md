@@ -27,23 +27,23 @@ Este diagrama ilustra el flujo de datos y la interacción entre el cliente, el s
 
 ```mermaid
 graph TD
-    User((👤 Usuario))
+    User(("👤 Usuario"))
     subgraph "Frontend (Vite + React)"
-        UI[🖥️ Interfaz UI/UX]
-        Forms[📝 Formularios]
-        Three[🧊 Escenas 3D]
+        UI["🖥️ Interfaz UI/UX"]
+        Forms["📝 Formularios"]
+        Three["🧊 Escenas 3D"]
     end
 
     subgraph "Backend (Express API)"
-        Server[⚙️ Servidor Node.js]
-        Router[🔀 Rutas API]
-        Controller[🎮 Controladores]
-        Security[🛡️ Middlewares Seguridad]
+        Server["⚙️ Servidor Node.js"]
+        Router["🔀 Rutas API"]
+        Controller["🎮 Controladores"]
+        Security["🛡️ Middlewares Seguridad"]
     end
 
     subgraph "Servicios Externos"
-        SMTP[📧 Servidor SMTP (Email)]
-        Maps[🗺️ Google Maps API]
+        SMTP["📧 Servidor SMTP (Email)"]
+        Maps["🗺️ Google Maps API"]
     end
 
     User -->|Navega| UI
