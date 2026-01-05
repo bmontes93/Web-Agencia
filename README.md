@@ -21,7 +21,7 @@ El objetivo es proporcionar a los visitantes una navegación fluida, tiempos de 
 
 ---
 
-## 🏗️Arquitectura del Sistema
+## Arquitectura del Sistema
 
 Este diagrama ilustra el flujo de datos y la interacción entre el cliente, el servidor y los servicios externos.
 
