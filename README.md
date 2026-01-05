@@ -1,126 +1,149 @@
 # 🚀 Agencia de Crecimiento Digital
 
-![Project Status](https://img.shields.io/badge/status-active-success.svg)
-![License](https://img.shields.io/badge/license-MIT-blue.svg)
-![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)
+<div align="center">
 
-Bienvenido al repositorio oficial de **Agencia de Crecimiento Digital**. Una plataforma web moderna, rápida y escalable diseñada para potenciar la presencia digital de negocios y empresas. Este proyecto combina una arquitectura robusta de backend con una experiencia de frontend de vanguardia.
+![Project Status](https://img.shields.io/badge/status-active-success.svg?style=for-the-badge)
+![License](https://img.shields.io/badge/license-MIT-blue.svg?style=for-the-badge)
+![Version](https://img.shields.io/badge/version-1.0.0-blue.svg?style=for-the-badge)
+![Node](https://img.shields.io/badge/node-%3E%3D%2018-green.svg?style=for-the-badge)
 
-🔗 **Repositorio Oficial:** [https://github.com/bmontes93/Web-Agencia](https://github.com/bmontes93/Web-Agencia)
+**[Ver Demo (Próximamente)]()** | **[Reportar Bug](https://github.com/bmontes93/Web-Agencia/issues)** | **[Solicitar Feature](https://github.com/bmontes93/Web-Agencia/issues)**
 
----
-
-## ✨ Características Principales
-
-- **⚡ Frontend de Alto Rendimiento:** Construido con **Vite** y **React** para una experiencia de usuario ultra rápida y fluida.
-- **🎨 Diseño UI/UX Premium:** Estilos modernos y responsivos utilizando **Tailwind CSS** y componentes interactivos.
-- **🔌 Backend Robusto:** API RESTful desarrollada con **Node.js** y **Express** para manejar lógica de negocio, correos y seguridad.
-- **🛡️ Seguridad Integrada:** Implementación de `helmet`, `cors`, y `express-rate-limit` para protección contra ataques comunes.
-- **📧 Sistema de Contacto:** Integración completa de formulario de contacto con envío de correos vía SMTP.
+</div>
 
 ---
 
-## 🛠️ Tecnologías Utilizadas
+## 📖 Descripción
 
-### Frontend
+**Agencia de Crecimiento Digital** es una plataforma web _Full Stack_ diseñada para ofrecer una experiencia de usuario inmersiva y de alto rendimiento. Este proyecto no es solo un sitio web, es una solución escalable que integra una arquitectura moderna de microservicios (preparada) con una interfaz de usuario reactiva y animada en 3D.
 
-- ![React](https://img.shields.io/badge/-React-61DAFB?style=flat&logo=react&logoColor=black) **React 19**: Biblioteca para construir interfaces de usuario.
-- ![Vite](https://img.shields.io/badge/-Vite-646CFF?style=flat&logo=vite&logoColor=white) **Vite**: Entorno de desarrollo de próxima generación.
-- ![Tailwind CSS](https://img.shields.io/badge/-Tailwind_CSS-38B2AC?style=flat&logo=tailwind-css&logoColor=white) **Tailwind CSS**: Framework de utilidades para diseño rápido.
-- ![Three.js](https://img.shields.io/badge/-Three.js-000000?style=flat&logo=three.js&logoColor=white) **Three.js / React Three Fiber**: Gráficos 3D interactivos.
-- ![Framer Motion](https://img.shields.io/badge/-Framer_Motion-0055FF?style=flat&logo=framer&logoColor=white) **Framer Motion**: Animaciones fluidas para React.
-
-### Backend
-
-- ![Node.js](https://img.shields.io/badge/-Node.js-339933?style=flat&logo=node.js&logoColor=white) **Node.js**: Entorno de ejecución para JavaScript.
-- ![Express](https://img.shields.io/badge/-Express-000000?style=flat&logo=express&logoColor=white) **Express**: Framework web minimalista.
-- ![Nodemailer](https://img.shields.io/badge/-Nodemailer-23B36F?style=flat&logo=nodemailer&logoColor=white) **Nodemailer**: Envío de correos electrónicos.
+El objetivo es proporcionar a los visitantes una navegación fluida, tiempos de carga instantáneos y un sistema de contacto seguro y confiable.
 
 ---
 
-## 🚀 Guía de Instalación y Uso
+## 🏗️ Arquitectura del Sistema
 
-Sigue estos pasos para levantar el proyecto en tu entorno local.
+Este diagrama ilustra el flujo de datos y la interacción entre el cliente, el servidor y los servicios externos.
 
-### 1. Clonar el Repositorio
+```mermaid
+graph TD
+    User((👤 Usuario))
+    subgraph "Frontend (Vite + React)"
+        UI[🖥️ Interfaz UI/UX]
+        Forms[📝 Formularios]
+        Three[🧊 Escenas 3D]
+    end
+
+    subgraph "Backend (Express API)"
+        Server[⚙️ Servidor Node.js]
+        Router[🔀 Rutas API]
+        Controller[🎮 Controladores]
+        Security[🛡️ Middlewares Seguridad]
+    end
+
+    subgraph "Servicios Externos"
+        SMTP[📧 Servidor SMTP (Email)]
+        Maps[🗺️ Google Maps API]
+    end
+
+    User -->|Navega| UI
+    User -->|Interactúa| Three
+    UI -->|Envía Datos| Forms
+    Forms -->|POST Request| Router
+    Router -->|Valida| Security
+    Security -->|Procesa| Controller
+    Controller -->|Envía Email| SMTP
+    UI -->|Solicita Mapas| Maps
+
+    style User fill:#f9f,stroke:#333,stroke-width:4px
+    style Server fill:#bbf,stroke:#333,stroke-width:2px
+    style UI fill:#bfb,stroke:#333,stroke-width:2px
+```
+
+---
+
+## 🛠️ Stack Tecnológico
+
+La aplicación está construida sobre un stack moderno JAMstack / PERN (sin DB por el momento).
+
+| Área         | Tecnología                                                                    | Propósito                           |
+| :----------- | :---------------------------------------------------------------------------- | :---------------------------------- |
+| **Frontend** | ![React](https://img.shields.io/badge/-React-black?logo=react)                | Librería UI basada en componentes.  |
+|              | ![Vite](https://img.shields.io/badge/-Vite-black?logo=vite)                   | Bundler ultrarrápido y HMR.         |
+|              | ![Tailwind](https://img.shields.io/badge/-Tailwind-black?logo=tailwindcss)    | Sistema de diseño utility-first.    |
+|              | ![Framer Motion](https://img.shields.io/badge/-Framer-black?logo=framer)      | Animaciones complejas y gestos.     |
+| **Backend**  | ![Node](https://img.shields.io/badge/-Node.js-black?logo=node.js)             | Runtime de JavaScript.              |
+|              | ![Express](https://img.shields.io/badge/-Express-black?logo=express)          | Framework de servidor.              |
+|              | ![Nodemailer](https://img.shields.io/badge/-Nodemailer-black?logo=nodemailer) | Servicio de emails transaccionales. |
+| **DevOps**   | ![Git](https://img.shields.io/badge/-Git-black?logo=git)                      | Control de versiones.               |
+|              | ![Eslint](https://img.shields.io/badge/-Eslint-black?logo=eslint)             | Linter y estandarización de código. |
+
+---
+
+## ⚙️ Configuración y Variables de Entorno
+
+Para ejecutar este proyecto, necesitas configurar las siguientes variables de entorno en tu archivo `backend/.env`.
+
+| Variable                  | Requerido | Descripción                         | Ejemplo                 |
+| :------------------------ | :-------: | :---------------------------------- | :---------------------- |
+| `PORT`                    |    No     | Puerto del servidor backend.        | `3000`                  |
+| `FRONTEND_URL`            |  **Sí**   | URL permitida por CORS.             | `http://localhost:5173` |
+| `EMAIL_USER`              |  **Sí**   | Usuario SMTP para envío de correos. | `tu@email.com`          |
+| `EMAIL_PASS`              |  **Sí**   | Contraseña de aplicación o SMTP.    | `password123`           |
+| `CONTACT_EMAIL_RECIPIENT` |  **Sí**   | Email donde llegarán los mensajes.  | `admin@agencia.com`     |
+
+---
+
+## 🚀 Instalación y Despliegue
+
+### Clonado e Instalación
 
 ```bash
+# 1. Clonar repositorio
 git clone https://github.com/bmontes93/Web-Agencia.git
-cd Web-Agencia
-```
 
-### 2. Configurar el Backend
+# 2. Instalar dependencias Backend
+cd Web-Agencia/backend
+npm install
+cp .env.example .env # Configurar tus variables aquí
 
-Navega a la carpeta del backend e instala las dependencias:
-
-```bash
-cd backend
+# 3. Instalar dependencias Frontend
+cd ../frontend
 npm install
 ```
 
-**Variables de Entorno (.env):**
-Crea un archivo `.env` en la carpeta `backend` basándote en `.env.example`. Asegúrate de definir:
-
-- `PORT=3000`
-- `FRONTEND_URL=http://localhost:5173`
-- Credenciales de correo (SMTP) para el formulario de contacto.
-
-### 3. Configurar el Frontend
-
-En una **nueva terminal**, navega a la carpeta del frontend e instala las dependencias:
+### Ejecución en Desarrollo
 
 ```bash
-cd frontend
-npm install
-```
+# Terminal 1: Backend
+cd backend && npm run dev
 
-### 4. Iniciar el Proyecto (Modo Desarrollo)
-
-**Terminal 1 (Backend):**
-
-```bash
-cd backend
-npm run dev
-```
-
-> El backend correrá en [http://localhost:3000](http://localhost:3000)
-
-**Terminal 2 (Frontend):**
-
-```bash
-cd frontend
-npm run dev
-```
-
-> El frontend correrá en [http://localhost:5173](http://localhost:5173)
-
----
-
-## 📂 Estructura del Proyecto
-
-```
-Web-Agencia/
-├── backend/            # Servidor API, Lógica de Negocio
-│   ├── routes/         # Rutas de la API
-│   ├── utils/          # Utilidades (Logger, ErrorHandler)
-│   └── server.js       # Punto de entrada del servidor
-├── frontend/           # Aplicación React + Vite
-│   ├── src/            # Código fuente React
-│   ├── public/         # Assets públicos
-│   └── index.html      # Punto de entrada HTML
-└── README.md           # Documentación del proyecto
+# Terminal 2: Frontend
+cd frontend && npm run dev
 ```
 
 ---
 
-## 🤝 Contribución
+## 🗺️ Roadmap del Proyecto
 
-¡Las contribuciones son bienvenidas! Si tienes ideas para mejorar este proyecto, siéntete libre de abrir un issue o enviar un pull request.
-
-## 📄 Licencia
-
-Este proyecto está bajo la Licencia MIT. Consulta el archivo `LICENSE` para más detalles.
+- [x] **Fase 1: MVP** - Estructura base, landing page y contacto funcional.
+- [x] **Fase 2: UI/UX 3D** - Integración de elementos flotantes y animaciones.
+- [ ] **Fase 3: Blog/CMS** - Sistema de gestión de contenidos para noticias.
+- [ ] **Fase 4: Dashboard Cliente** - Área privada para que clientes vean métricas.
+- [ ] **Fase 5: CI/CD** - Pipelines automatizados para testing y deploy.
 
 ---
 
-Hecho con ❤️ por [bmontes93](https://github.com/bmontes93)
+## 🤝 Contribuyendo
+
+1.  Haz un **Fork** del proyecto.
+2.  Crea tu rama de feature (`git checkout -b feature/AmazingFeature`).
+3.  Haz **Commit** de tus cambios (`git commit -m 'Add some AmazingFeature'`).
+4.  Haz **Push** a la rama (`git push origin feature/AmazingFeature`).
+5.  Abre un **Pull Request**.
+
+---
+
+<div align="center">
+  <sub>Desarrollado con pasión por <a href="https://github.com/bmontes93">bmontes93</a></sub>
+</div>
